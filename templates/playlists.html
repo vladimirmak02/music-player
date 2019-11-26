@@ -1,0 +1,46 @@
+<div class="modal fade" id="newPlaylistModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New playlist</h5>
+        <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label for="plNameInp">Playlist Name</label>
+          <input size="20" id="plNameInp">
+          <div id="files"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary closeBtn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="savePlBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm- " id="playerControls text-center">
+    <div id="controlElements" class="text-center justify-content-center">
+        <div class="row">
+            <div class="col-md-12"><span id="author">Author</span><span> - </span><span id="songname">Song Name</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12" style="letter-spacing: 40px; font-size: 50px;">
+                <i class="fa fa-fast-backward" aria-hidden="true"></i>
+                <i class="fa fa-play" aria-hidden="true" id="playpause"></i>
+                <i class="fa fa-fast-forward" aria-hidden="true"></i>
+            </div>
+        </div>
+        <button class="btn" type="button" id="newPlaylistBtn" data-toggle="modal" data-target="#newPlaylistModal">New</button>
+        <!--<div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>-->
+    </div>
+</div>
+<div id="playlistList"></div>
+
+
+<script src="{{url_for('static', filename='playlists.js')}}"></script>
